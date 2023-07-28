@@ -15,10 +15,10 @@ export async function GET() {
     return NextResponse.json(todos)
 }
 
-export async function POST(req: RequestMeta) {
+// export async function POST(req: RequestMeta) {
 
-    const resultMove = await req.files.photoFromFront.mv(photoPath);
+//     const resultMove = await req.files.photoFromFront.mv(photoPath);
 
-    return NextResponse.json('tpoto')
-}
+//     return NextResponse.json('tpoto')
+// }
 
