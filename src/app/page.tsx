@@ -1,4 +1,24 @@
-import Image from 'next/image'
+'use client'
+import { Console } from 'console';
+import Image from 'next/image';
+
+function handleOptionChange() {
+  fetch(process.env.URL + "/api/file", {method: 'GET'})
+  .then(response=> response.json())
+  .then(data=>{
+     console.log(data)
+  })
+}
+
+const handlerTest= ()=>{
+ fetch("/api/file", {method: 'GET'})
+ .then(response=> response.json())
+ .then(data=>{
+    console.log(data)
+ })
+
+ 
+}
 
 export default function Home() {
   return (
@@ -8,6 +28,7 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className="font-mono font-bold">src/app/page.tsx</code>
         </p>
+        <button onClick={handlerTest}> Test Route</button>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
